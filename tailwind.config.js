@@ -33,6 +33,9 @@ module.exports = {
                 '900': '#33373D',
                 },
         },
+        fontFamily: {
+            'global': ['Raleway', 'sans-serif'],
+        },
         screens: {
         'sm': '640px',
         // => @media (min-width: 640px) { ... }
@@ -46,7 +49,9 @@ module.exports = {
         'xl': '1280px',
         // => @media (min-width: 1280px) { ... }
         },
-
+        container: {
+            center: true,
+        },
     },
     variants: {},
     plugins: [],

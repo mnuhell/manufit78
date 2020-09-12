@@ -1,11 +1,24 @@
 import React from 'react';
+import { Switch, Route } from "react-router-dom";
+import Header from '../src/components/Header';
+import '../src/scss/styles.scss';
+import Home from './components/Home';
+import QuienSoy from './components/QuienSoy';
+import QueHago from './components/QueHago';
+import Noticias from './components/Noticias';
 
 const ManufitApp = () => {
 
     return (
-        <div className="min-h-screen bg-fit-dark-900">
-            <h2 className="text-center text-4xl font-bold text-fit-dark-900">ManufitApp</h2>
-        </div>
+        <>
+        <Header />
+        <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/quien-soy" component={QuienSoy}></Route>
+            <Route exact path="/que-hago" component={QueHago}></Route>
+            <Route exact path="/noticias" component={Noticias}></Route>
+        </Switch>
+        </>
     )
 }
 
