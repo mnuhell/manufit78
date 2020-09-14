@@ -34,7 +34,7 @@ module.exports = {
                 },
         },
         fontFamily: {
-            'global': ['Raleway', 'sans-serif'],
+            'global': ['Alice', 'sans-serif'],
         },
         screens: {
         'sm': '640px',
@@ -52,6 +52,9 @@ module.exports = {
         container: {
             center: true,
         },
+        fontSize: {
+            'title': '48px',
+        }
     },
     variants: {},
     plugins: [],

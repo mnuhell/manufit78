@@ -1,9 +1,26 @@
 import React from 'react';
+import Noticia from './Noticia';
+import { Posts } from './api/posts';
+import styled from 'styled-components';
+
+const NoticiasWrap = styled.div`
+
+    max-width: 43rem;
+`;
 
 const Noticias = () => {
 
     return (
-        <h1>Noticias</h1>
+        <NoticiasWrap className="container font-global mt-10 wrapper__noticias">
+            <div className="noticias">      
+                { 
+                    Posts.map( post => (
+                            <Noticia key={post.id} {...post } /> 
+                        ))
+                }
+            </div>
+        </NoticiasWrap>
+        
     )
 }
 
