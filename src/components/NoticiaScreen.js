@@ -4,7 +4,7 @@ import {
   } from "react-router-dom";
 
 
-const NoticiaScreen = ({ history }) => {
+const NoticiaScreen = () => {
 
     let { title } = useParams();
     

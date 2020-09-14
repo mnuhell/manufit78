@@ -20,6 +20,7 @@ const Main = styled.main`
     .wrapper{
 
         padding: 0 15px;
+        height: 100vh;
 
     }
 
@@ -28,7 +29,7 @@ const Main = styled.main`
 const ManufitApp = () => {
 
     return (
-        <Main className="bg-fit-white-100 ">
+        <Main className="bg-fit-dark-600 text-fit-white-200">
         <Header />
         <div className="wrapper">
             
@@ -36,7 +37,7 @@ const ManufitApp = () => {
                 <Route exact path="/" component={Home}></Route>
                 <Route exact path="/quien-soy" component={QuienSoy}></Route>
                 <Route exact path="/que-hago" component={QueHago}></Route>
-                <Route path="/noticias/" component={Noticias}></Route>
+                <Route exact path="/noticias/" component={Noticias}></Route>
                 <Route path="/noticias/:title" component={NoticiaScreen}></Route>
             </Switch>
         </div>
