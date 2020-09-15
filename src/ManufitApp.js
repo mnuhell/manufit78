@@ -21,7 +21,7 @@ const Main = styled.main`
 
         padding: 0 15px;
         height: 100vh;
-
+        margin-top: 70px;
     }
 
 `;
@@ -38,7 +38,7 @@ const ManufitApp = () => {
                 <Route exact path="/quien-soy" component={QuienSoy}></Route>
                 <Route exact path="/que-hago" component={QueHago}></Route>
                 <Route exact path="/noticias/" component={Noticias}></Route>
-                <Route path="/noticias/:title" component={NoticiaScreen}></Route>
+                <Route path="/noticias/:url" component={NoticiaScreen}></Route>
             </Switch>
         </div>
         <Footer />

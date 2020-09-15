@@ -5,7 +5,6 @@ const ContainerFooter = styled.div`
     position: fixed;
     bottom: 0;
     width: 100%;
-    border-bottom: 10px solid orange;
 `;
 
 
@@ -14,7 +13,7 @@ const Footer = () => {
 
     return (
         <ContainerFooter>
-            <footer className="py-2 text-center bg-fit-dark-600 ">
+            <footer className="py-2 text-center bg-fit-dark-500 shadow">
                 <p className="text-fit-white-200">todos los derechos reservados</p>
             </footer>
         </ContainerFooter>

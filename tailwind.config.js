@@ -54,6 +54,7 @@ module.exports = {
         },
         fontSize: {
             'title': '48px',
+            'menu' : '1rem'
         }
     },
     variants: {},

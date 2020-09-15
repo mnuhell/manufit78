@@ -1,7 +1,8 @@
 export const Posts = [
         { 
             "id": 1,
-            "title": "Mi primer post desde la api", 
+            "title": "Mi primer post desde la api",
+            "url": "mi-primer-post-desde-la-api-1",
             "author": "Manuel Villagordo", 
             "username": "manufit78", 
             "date": "2020-08-14", 
@@ -12,6 +13,7 @@ export const Posts = [
         { 
             "id": 2,
             "title": "Mi primer post desde la api", 
+            "url": "mi-primer-post-desde-la-api-2",
             "author": "Manuel Villagordo", 
             "username": "manufit78", 
             "date": "2020-08-14",
@@ -22,6 +24,7 @@ export const Posts = [
         { 
             "id": 3,
             "title": "Mi primer post desde la api", 
+            "url": "mi-primer-post-desde-la-api-3",
             "author": "Manuel Villagordo", 
             "username": "manufit78", 
             "date": "2020-08-14",
