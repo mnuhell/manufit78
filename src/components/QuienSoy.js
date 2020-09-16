@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -13,17 +14,20 @@ const Wrapper = styled.div`
 `;
 
 const Imagen = styled.image`
-    img{
-        
-        width: 130px;
-        height: 130px;
-        -moz-border-radius: 100%;
-        -webkit-border-radius: 100%;
-        border-radius: 50%;
-        margin: 0 auto 10px auto;
-    }
 
     
+        img{
+            width: 130px;
+            height: 130px;
+            -moz-border-radius: 100%;
+            -webkit-border-radius: 100%;
+            border-radius: 50%;
+            margin: 0 auto 50px auto;
+            background-size: cover;
+            background-position: center;
+    
+        }
+        
 `;
 
 const Face = 'face-manu';
@@ -34,12 +38,28 @@ const QuienSoy = () => {
         <Wrapper className="container font-global notas">
             
             <div className="notas__intro">
+            {/* <Video>
+                <video preload>
+                    <source src={`./assets/${Face}.mov`} type="video/mp4" />
+                    Tu navegador no soporta la etiqueta HTML5 video.
+                </video>
+            </Video> */}
                 <Imagen className="text-center"> <img src={`./assets/${Face}.jpg`} className="text-center shadow border-solid border-4 mb-4 border-fit-white-300" alt="Mi" /></Imagen>
-                <p>Mi nombre es Manuel, vivo en Orihuela, Alicante desde hace unos 14 años junto Veronica, mi mujer desde hace 13, mas o menos ;).
+                <p>Mi nombre es Manuel, vivo en Orihuela, Alicante desde hace unos 14 años junto a Veronica, mi mujer desde hace 13 años ;).
                 </p>
-                <p>Mi experiencia laboral, he trabajo como <strong className="text-fit-dark-400">Delineante</strong>, fue mi primera opción y me gané la vida así durante 10 años de vida en las que aprendí mucho y
+                <p>Mi experiencia laboral:</p>
+                <p>He trabajado como <strong className="text-fit-dark-400">Delineante</strong> desde el 1999 al 2008, fue mi primera opción y me gané la vida así durante 10 años de vida en las que aprendí mucho y
                 y conocí a muy buena gente. Mucha con la cual todavía tengo relación.</p>
-                <p></p>
+                <p>Con eso vino la crisis del 2008, la que hizo mucho daño a la construcción. Fué en ese momento que deje la empresa en la que estaba para seguir formandome y estudiar un ciclo de Grado Superior en Progamación y adentrarme en un mundo que, 
+                a día de hoy no me deja dormir por el continuo aprendizaje.</p>
+                <p>Después de 9 años mas de mi vida como autónomo desarrollando aplicaciones web para distintos sectores y pelear con clientes. decidí pasarme a la empresa privada.</p>
+                <p> <strong>Telfy</strong> fue la que aposto por mi, y en la que estoy trabajando actualmente como desarrolador php y gestión de una ISP.</p>
+                <p>Si quieres saber en lo que estoy ahora y las técnologias con las que estoy trasteando te invito que pasas por aquí <Link to="/que-hago" className="text-fit-dark-200 underline">Que hago</Link></p>
+
+                <div className="Redes">
+
+                </div>
+
             </div>
         </Wrapper>
     )
