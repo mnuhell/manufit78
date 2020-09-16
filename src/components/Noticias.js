@@ -1,12 +1,7 @@
 import React from 'react';
 import Noticia from './Noticia';
 import { Posts } from './api/posts';
-import styled from 'styled-components';
-
-const NoticiasWrap = styled.div`
-
-    max-width: 43rem;
-`;
+import NoticiasWrap from './styled/NoticiasWrap';
 
 const Noticias = () => {
 

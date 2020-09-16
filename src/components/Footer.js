@@ -13,8 +13,8 @@ const Footer = () => {
 
     return (
         <ContainerFooter>
-            <footer className="py-2 text-center bg-fit-dark-500 shadow">
-                <p className="text-fit-white-200">todos los derechos reservados</p>
+            <footer className="py-2 text-center font-global bg-fit-white-300 shadow">
+                <p className="text-fit-dark-500">todos los derechos reservados</p>
             </footer>
         </ContainerFooter>
     )

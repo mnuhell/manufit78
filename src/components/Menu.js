@@ -23,9 +23,6 @@ const Menu = () => {
                     <Link to="/quien-soy"> Quien soy </Link>
                 </li>
                 <li className="li-menu">
-                    <Link to="/que-hago"> Que hago </Link>
-                </li>
-                <li className="li-menu">
                     <Link to="/noticias"> Noticias </Link>
                 </li>
             </ul>

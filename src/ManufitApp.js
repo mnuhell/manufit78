@@ -36,7 +36,6 @@ const ManufitApp = () => {
             <Switch>
                 <Route exact path="/" component={Home}></Route>
                 <Route exact path="/quien-soy" component={QuienSoy}></Route>
-                <Route exact path="/que-hago" component={QueHago}></Route>
                 <Route exact path="/noticias/" component={Noticias}></Route>
                 <Route path="/noticias/:url" component={NoticiaScreen}></Route>
             </Switch>

@@ -17,7 +17,7 @@ const Noticia = ( post ) => {
     return (
         <NoticiaWrapper className="noticia mb-10">
             <div className="h2">
-                <Link to={`./${url}`} ><h2 className="noticia__title text-title">{title}</h2></Link>
+                <Link to={`./noticias/${url}`} ><h2 className="noticia__title text-title">{title}</h2></Link>
                     <p className="noticia__date mb-5"><span>{author}</span> <span>{date}</span></p> 
             </div>
             <div className="noticia__content">
