@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const MenuContainer = styled.nav`
     .li-menu{
         a{
-            font-size: .9rem;
+            font-size: .75rem;
         }
     }
 `;

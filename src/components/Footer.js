@@ -5,6 +5,7 @@ const ContainerFooter = styled.div`
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: .7rem;
 `;
 
 
@@ -13,8 +14,9 @@ const Footer = () => {
 
     return (
         <ContainerFooter>
-            <footer className="py-2 text-center font-global bg-fit-white-300 shadow">
-                <p className="text-fit-dark-500">todos los derechos reservados</p>
+            <footer className="py-2 text-center font-global bg-fit-white-300 text-fit-dark-500 shadow">
+                <p><a href="" >Descarga mi CV</a></p>
+                
             </footer>
         </ContainerFooter>
     )

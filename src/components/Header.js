@@ -4,13 +4,13 @@ import Menu from './Menu';
 import styled from 'styled-components';
 
 const HeaderContent = styled.header`
-    
+    margin-bottom: 100px;
 `;
 
 const Header = () => {
     
     return (
-        <HeaderContent className="header py-3 px-3 bg-fit-dark-500">
+        <HeaderContent className="header py-3 px-3 bg-fit-white-300 text-fit-dark-500">
             <div className="container grid grid-cols-2">
                 <Logo />
                 <Menu />

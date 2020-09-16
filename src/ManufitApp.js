@@ -21,7 +21,6 @@ const Main = styled.main`
 
         padding: 0 15px;
         height: 100vh;
-        margin-top: 70px;
     }
 
 `;

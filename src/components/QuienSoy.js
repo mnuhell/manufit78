@@ -29,7 +29,7 @@ const Face = 'face-manu';
 const QuienSoy = () => {
     return (
         <Wrapper className="container font-global">
-            <Imagen className="text-center"> <img src={`./assets/${Face}.jpg`} className="text-center shadow border-solid border-4 mb-4 border-fit-dark-400" alt="Mi" /></Imagen>
+            <Imagen className="text-center"> <img src={`./assets/${Face}.jpg`} className="text-center shadow border-solid border-4 mb-4 border-fit-white-300" alt="Mi" /></Imagen>
             <div className="notas">
                 <p>Mi nombre es Manuel, vivo en Orihuela, Alicante desde hace unos 14 años junto Veronica, mi mujer desde hace 13, mas o menos ;).
                 </p>
