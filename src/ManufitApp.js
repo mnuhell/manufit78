@@ -28,7 +28,7 @@ const Main = styled.main`
 const ManufitApp = () => {
 
     return (
-        <Main className="bg-fit-dark-600 text-fit-white-200">
+        <Main className="bg-fit-dark-500 text-fit-white-200">
         <Header />
         <div className="wrapper">
             

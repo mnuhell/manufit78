@@ -3,11 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    flex: 1;
+    display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     align-content: center;
     max-width: 43rem;
+
 `;
 
 const Imagen = styled.image`
@@ -21,6 +23,7 @@ const Imagen = styled.image`
         margin: 0 auto 10px auto;
     }
 
+    
 `;
 
 const Face = 'face-manu';
@@ -28,9 +31,10 @@ const Face = 'face-manu';
 
 const QuienSoy = () => {
     return (
-        <Wrapper className="container font-global">
-            <Imagen className="text-center"> <img src={`./assets/${Face}.jpg`} className="text-center shadow border-solid border-4 mb-4 border-fit-white-300" alt="Mi" /></Imagen>
-            <div className="notas">
+        <Wrapper className="container font-global notas">
+            
+            <div className="notas__intro">
+                <Imagen className="text-center"> <img src={`./assets/${Face}.jpg`} className="text-center shadow border-solid border-4 mb-4 border-fit-white-300" alt="Mi" /></Imagen>
                 <p>Mi nombre es Manuel, vivo en Orihuela, Alicante desde hace unos 14 años junto Veronica, mi mujer desde hace 13, mas o menos ;).
                 </p>
                 <p>Mi experiencia laboral, he trabajo como <strong className="text-fit-dark-400">Delineante</strong>, fue mi primera opción y me gané la vida así durante 10 años de vida en las que aprendí mucho y
