@@ -52,17 +52,16 @@ const QuienSoy = () => {
                 </video>
             </Video> */}
                 <Imagen className="text-center"> <img src={`./assets/${Face}.jpg`} className="text-center shadow border-solid border-4 mb-4 border-fit-white-300" alt="Mi" /></Imagen>
-                <p>Mi nombre es Manuel, vivo en Orihuela, Alicante desde hace unos 14 años junto a Veronica, mi mujer desde hace 13 años ;).</p>
-                <p>Aficciones tengo muchas, sobre todo deportivas y lo práctico durante 6 días a la semana.</p>
+                <p>Mi nombre es Manuel, vivo en Orihuela, Alicante desde hace unos 14 años junto a <span className="italic">Veronica</span>, mi mujer desde hace 13 y con <span className="italic">Hannibal</span> que esta con nosotros desde el 2012 ;).</p>
+                <p>Aficciones tengo muchas, a parte de disfrutar de la familia y amigos también práctico durante 6 días a la semana algún deporte, por ejemplo:</p>
 
-                
                     <p className="pb-0 pt-4 italic">Entramiento funcional, Padel, Running...</p>
                
 
-                <p className=" pt-4">Mi experiencia laboral:</p>
+                <p className=" pt-4">Mi experiencia laboral a groso modo, sin entrar en detalles para no aburrir ;)</p>
                 <p>He trabajado como <strong className="text-fit-dark-400">Delineante</strong> desde el 1999 al 2008, fue mi primera opción y me gané la vida así durante 10 años de vida en las que aprendí mucho y
                 conocí a muy buena gente. Mucha con la cual todavía tengo relación.</p>
-                <p>Con eso vino la crisis del 2008, la que hizo mucho daño a la construcción. Fué en ese momento que deje la empresa en la que estaba para seguir formandome y estudiar un ciclo de Grado Superior en Progamación y adentrarme en un mundo que, 
+                <p>Con eso vino la crisis del 2008, la que hizo mucho daño a la construcción. Fué en ese momento que deje la empresa en la que estaba para seguir formandome y estudiar un <span className="italic">Ciclo de Grado Superior en Progamación</span> y adentrarme en un mundo que, 
                 a día de hoy no me deja dormir por el continuo aprendizaje.</p>
                 <p>Después de 9 años mas de mi vida como autónomo desarrollando aplicaciones web para distintos sectores y pelear con clientes. decidí pasarme a la empresa privada.</p>
                 <p> <strong>Telfy</strong> fue la que aposto por mi, y en la que estoy trabajando actualmente como desarrolador php y gestión de una ISP.</p>
