@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Imagen = '../manufit78.svg';
+const Imagen = '../manufit78_black.svg';
 
 const Logo = ( ) => {
     

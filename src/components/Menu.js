@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 const MenuContainer = styled.nav`
     .li-menu{
+        display: inherit;
+        vertical-align: middle;
         a{
             font-size: .75rem;
         }
