@@ -21,8 +21,8 @@ const WrappperHome = styled.div`
             margin-bottom: 0px;
         }
         @media(min-width: 48em) {
-            font-size: 2.5rem;
-            line-height: 4.5rem;
+            font-size: 2.3rem;
+            margin-bottom: 20px;
         }
 
     }
@@ -52,13 +52,14 @@ const WrappperHome = styled.div`
             }
             @media(min-width: 48em) {
                 width: 25px;
+                left: -30px;
             }
         }
         &:after{
             content: '';
             border: 1px solid #A9B8CA;
             position: absolute;
-            top: 57%;
+            top: 50%;
             right: -30px;
             
             @media(min-width: 20em) {
@@ -67,6 +68,7 @@ const WrappperHome = styled.div`
             }
             @media(min-width: 48em) {
                 width: 25px;
+                right: -30px;
             }
         }
     }
