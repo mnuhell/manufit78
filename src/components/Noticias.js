@@ -6,7 +6,7 @@ import NoticiasWrap from './styled/NoticiasWrap';
 const Noticias = () => {
 
     return (
-        <NoticiasWrap className="container font-global wrapper__noticias pt-32">
+        <NoticiasWrap className="container font-global wrapper__noticias">
             <div className="noticias">      
                 { 
                     Posts.map( post => (

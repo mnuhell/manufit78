@@ -14,11 +14,12 @@ import QueHago from './components/QueHago';
 import Noticias from './components/Noticias';
 import styled from 'styled-components';
 import NoticiaScreen from './components/NoticiaScreen';
+import { createBrowserHistory } from 'history'
 
 const Main = styled.main`
 
     .wrapper{
-
+        margin: 50px 0;
         padding: 0 15px;
         height: 100vh;
     }
@@ -28,17 +29,17 @@ const Main = styled.main`
 const ManufitApp = () => {
 
     return (
-        <Main className="bg-fit-dark-500 text-fit-white-200">
+        <Main className="text-fit-white-200">
         <Header />
-        <div className="wrapper">
-            
+        
             <Switch>
                 <Route exact path="/" component={Home}></Route>
                 <Route exact path="/quien-soy" component={QuienSoy}></Route>
+                <Route exact path="/que-hago/" component={QueHago}></Route>
                 <Route exact path="/noticias/" component={Noticias}></Route>
                 <Route path="/noticias/:url" component={NoticiaScreen}></Route>
             </Switch>
-        </div>
+        
         <Footer />
         </Main>
     )

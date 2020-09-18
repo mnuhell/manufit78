@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContainerFooter = styled.div`
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     font-size: .7rem;

@@ -4,7 +4,8 @@ import Menu from './Menu';
 import styled from 'styled-components';
 
 const HeaderContent = styled.header`
-    position:fixed;
+    position:relative;
+    top: 0;
     width: 100%;
 `;
 
