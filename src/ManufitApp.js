@@ -1,20 +1,11 @@
-import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    useParams
-  } from "react-router-dom"; 
+import React from 'react'; 
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import '../src/scss/styles.scss';
-import Home from './components/Home';
-import QuienSoy from './components/QuienSoy';
-import QueHago from './components/QueHago';
-import Noticias from './components/Noticias';
 import styled from 'styled-components';
-import NoticiaScreen from './components/NoticiaScreen';
-import { createBrowserHistory } from 'history'
+import { Provider } from 'react-redux';
+import { store } from './components/store/store';
+import AppRouters from './components/routers/AppRouters';
 
 const Main = styled.main`
 
@@ -23,25 +14,20 @@ const Main = styled.main`
         padding: 0 15px;
         height: 100vh;
     }
-
 `;
 
 const ManufitApp = () => {
 
     return (
-        <Main className="text-fit-white-200">
-        <Header />
-        
-            <Switch>
-                <Route exact path="/" component={Home}></Route>
-                <Route exact path="/quien-soy" component={QuienSoy}></Route>
-                <Route exact path="/que-hago/" component={QueHago}></Route>
-                <Route exact path="/noticias/" component={Noticias}></Route>
-                <Route path="/noticias/:url" component={NoticiaScreen}></Route>
-            </Switch>
-        
-        <Footer />
-        </Main>
+        <Provider store={ store }>
+            <Main className="text-fit-white-200">
+            <Header />
+            
+            <AppRouters />
+            
+            <Footer />
+            </Main>
+        </Provider>
     )
 }
 
