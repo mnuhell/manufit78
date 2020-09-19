@@ -10,8 +10,10 @@ const Wrapper = styled.div`
     align-items: center;
     align-content: center;
     max-width: 43rem;
+    padding: 5em .2em;
 
     .notas__intro{
+        padding: 0 20px;
         p{
             margin-bottom: 10px;
             line-height: 1.2rem;
@@ -44,7 +46,7 @@ const QuienSoy = () => {
     return (
         <Wrapper className="container font-global notas">
             
-            <div className="notas__intro ">
+            <div className="notas__intro">
             {/* <Video>
                 <video preload>
                     <source src={`./assets/${Face}.mov`} type="video/mp4" />

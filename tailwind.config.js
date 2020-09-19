@@ -35,6 +35,7 @@ module.exports = {
         },
         fontFamily: {
             'global': ['Alice', 'sans-serif'],
+            'culum' : ['Roboto Slab', 'serif'],
         },
         screens: {
         'sm': '640px',

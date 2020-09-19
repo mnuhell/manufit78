@@ -17,11 +17,11 @@ const WrappperHome = styled.div`
 
     h1{
         @media(min-width: 20em) {
-            font-size: 1.2rem;
+            font-size: 1.2em;
             margin-bottom: 0px;
         }
-        @media(min-width: 48em) {
-            font-size: 2.3rem;
+        @media(min-width: 40em) {
+            font-size: 2em;
             margin-bottom: 20px;
         }
 
@@ -29,15 +29,15 @@ const WrappperHome = styled.div`
     h2{
         
         @media(min-width: 20em) {
-            font-size: 1.4rem;
-            line-height: 1rem;
+            font-size: 2.1rem;
+            line-height: 1em;
         }
-        @media(min-width: 48em) {
-            font-size: 4rem;
+        @media(min-width: 40em) {
+            font-size: 4em;
             line-height: .2rem;
         }
         position: relative;
-        font-size: 4rem;
+        font-size: 4em;
         width: auto;
         display: inline-block;
         &:before{
@@ -50,8 +50,8 @@ const WrappperHome = styled.div`
                 width: 15px;
                 left: -20px;
             }
-            @media(min-width: 48em) {
-                width: 25px;
+            @media(min-width: 40em) {
+                width: 20px;
                 left: -30px;
             }
         }
@@ -66,38 +66,38 @@ const WrappperHome = styled.div`
                 width: 15px;
                 right: -20px;
             }
-            @media(min-width: 48em) {
-                width: 25px;
+            @media(min-width: 40em) {
+                width: 20px;
                 right: -30px;
             }
         }
     }
     
     .intro__mas{
-        font-size: .8rem;
+        font-size: .8em;
         position: absolute;
         right: 0px;
         bottom: 0px;
         @media(min-width: 20em) {
-            font-size: .8rem;
+            font-size: .3em;
             bottom: -20px;
         }
-        @media(min-width: 48em) {
-            font-size: .8rem;
-            bottom: -35px;
+        @media(min-width: 40em) {
+            font-size: .2em;
+            bottom: -33px;
         }
     }
     .intro__dev{
-        font-size: .8rem;
+        font-size: .8em;
         position: absolute;
         left: 0px;
         @media(min-width: 20em) {
-            font-size: .8rem;
+            font-size: .3em;
             bottom: -20px;
         }
-        @media(min-width: 48em) {
-            font-size: .8rem;
-            bottom: -35px;
+        @media(min-width: 40em) {
+            font-size: .2em;
+            bottom: -33px;
         }
         
     }
@@ -105,16 +105,15 @@ const WrappperHome = styled.div`
 `;
 
 const Home = () => {
-
     
     return(
         
         <WrappperHome>
             <div className="container font-global intro">
                 <h1>Mi nombre:</h1>
-                <h2>Manuel Villagordo vera
+                <h2>Manuel Villagordo
                 <small className="intro__mas"><Link to="/quien-soy">Saber más</Link></small>
-                <small className="intro__dev"><Link to="/quien-soy">desarrollador web</Link></small>
+                <small className="intro__dev"><Link to="/que-hago">desarrollador web</Link></small>
                 </h2>
             </div>
         </WrappperHome>
