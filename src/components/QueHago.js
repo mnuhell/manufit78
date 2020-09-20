@@ -89,28 +89,75 @@ const QueHago = () => {
                 <div className="expe__case">
                 <div className="expe__case-unit">
                     <div className="expe__case-date">
-                        Junio 2019 - Mayo 2019
+                        Junio 2010 - Marzo 2017
                         <div className="expe__case-place ">
-                            Barcelona, España
+                            Orihuela, España
                         </div>
                         
                     </div>
                     <div className="expe__case-work">
-                        Programador Magento
+                        Wordpress, Prestashop
                     </div>
                 </div>
                 <div className="expe__case-unit">
                     <div className="expe__case-date">
-                        Junio 2019 - Mayo 2019
+                        Junio 2015 - Mayo 2017
                         <div className="expe__case-place ">
                             Barcelona, España
                         </div>
                         
                     </div>
                     <div className="expe__case-work">
-                        Programador Magento
+                        Ecommerce Magento 1.9
                     </div>
                 </div>
+                    <div className="expe__case-unit">
+                        <div className="expe__case-date">
+                            Junio 2017 - Mayo 2018
+                            <div className="expe__case-place ">
+                                Madrid, España
+                            </div>
+                            
+                        </div>
+                        <div className="expe__case-work">
+                            Ecommerce Magento 2.0
+                        </div>
+                    </div>
+                    <div className="expe__case-unit">
+                        <div className="expe__case-date">
+                            Diciembre 2018 - Julio 2019
+                            <div className="expe__case-place ">
+                                Alicante, España
+                            </div>
+                            
+                        </div>
+                        <div className="expe__case-work">
+                            Web php Symfony
+                        </div>
+                    </div>
+                    <div className="expe__case-unit">
+                        <div className="expe__case-date">
+                            Diciembre 2018 - actualidad
+                            <div className="expe__case-place ">
+                                Catral, España
+                            </div>
+                            
+                        </div>
+                        <div className="expe__case-work">
+                            ISP con PHP
+                        </div>
+                    </div>
+                    <div className="expe__case-unit">
+                        <div className="expe__case-date">
+                            Diciembre 2018 - actualidad
+                            <div className="expe__case-place ">
+                                Catral, España
+                            </div>
+                        </div>
+                        <div className="expe__case-work">
+                            <p>Proyecto personal, <p>Laravel y Vue. Reserva clases Crossfit </p></p>
+                        </div>
+                    </div>
                 </div>
             </div>
             

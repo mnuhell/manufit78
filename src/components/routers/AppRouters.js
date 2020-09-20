@@ -24,7 +24,7 @@ import LoginScreen from '../LoginScreen';
 
             <PrivateRoute 
               exact path="/admin" component={AdminScreen} isAuthenticated={isLoggedIn}
-            />
+              />
 
             <Route path="/auth/login" component={LoginScreen} />
         </Switch>
