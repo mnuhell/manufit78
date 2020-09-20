@@ -1,21 +1,92 @@
-import React from 'react';
+import React, { useState } from 'react';
+import validator, { isEmail } from 'validator';
 
 import styled from 'styled-components';
+import useForm from './hooks/useForm';
 
+const FormLogin = styled.div`
 
+    display:flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 
+    form{
+        min-width: 20em;
+    }
+
+`;
 
 const LoginScreen = () => {
 
+
+    const [ formValues, handleInputChange, reset ] = useForm({
+        email: 'm.villagordovera@gmail.com',
+        password: 1234
+    });
+
+    const { email, password } = formValues;
+
+    const handleSubmitLogin = e => {
+        e.preventDefault();
+
+        const data = {
+            email: email,
+            password: password
+        }
+
+        if(isFormValid) {
+            localStorage.setItem('usuario', JSON.stringify(data));
+        }
+
+        const savedData = localStorage.getItem('usuario');
+
+        console.log('Data: ', JSON.parse(savedData));
+    }
+
+    const isFormValid = () => {
+        if(!validator.isEmail(email)) {
+            //dispatch( setError('El email no es correcto'));
+            return false;
+        }
+
+        return true;
+    } 
+
     return (
+        <FormLogin className="container form-login">
+            
+            <form className="font-culum" onSubmit={ handleSubmitLogin }>
+                <div className="form-login-title text-center mb-4 uppercase">
+                    <p>Login</p>
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                        Email
+                    </label>
+                    <input 
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-fit-dark-500 leading-tight focus:outline-none focus:shadow-outline" 
+                    id="email" type="email" placeholder="Email" name="email"
+                    onChange={handleInputChange} />
+                </div>
 
-        <div className="container">
-            <div className="loginScreen">
-                <h1>Login Screen</h1>
-            </div>
+                <div className="mb-6">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                        Password
+                    </label>
+                    <input 
+                    className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-fit-dark-500 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
+                    id="password" type="password" placeholder="******************"
+                    name="password" onChange={handleInputChange} />
+                </div>
 
-        </div>
-
+                <div className="flex items-center justify-between">
+                    <button className="bg-fit-white-100 text-fit-dark-500 hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        Entrar
+                    </button>
+                </div>
+            </form>
+        </FormLogin>
     )
 }
 

@@ -189,7 +189,7 @@ const QueHago = () => {
                             </div>
                         </div>
                         <div className="expe__case-work">
-                            <p>Proyecto personal, <p>Laravel y Vue. Reserva clases Crossfit </p></p>
+                            <p>Proyecto personal, Laravel y Vue. Reserva clases Crossfit </p>
                         </div>
                     </div>
                 </div>
@@ -202,20 +202,20 @@ const QueHago = () => {
                 <h2 className="contacto__title"> Información de contácto</h2>
             </div>
             <div className="nacimiento box">
-                <h2 class="title nacimiento__title font-bold">Fecha de nacimiento</h2>
+                <h2 className="title nacimiento__title font-bold">Fecha de nacimiento</h2>
                 <p className="nacimiento__content"> 30-01-1978</p>
             </div>
             <div className="nacionalidad box">
-                <h2 class="title nacionalidad__title font-bold">Nacionalidad</h2>
+                <h2 className="title nacionalidad__title font-bold">Nacionalidad</h2>
                 <p className="nacionalidad__content"> Española</p>
             </div>
             <div className="email box">
-                <h2 class="title email__title font-bold">Email</h2>
+                <h2 className="title email__title font-bold">Email</h2>
                 <p className="email__content"> m.villagordovera[at]gmail.com</p>
             </div>
 
             <div className="social box">
-                <h2 class="title direccion__title font-bold">Redes sociales</h2>
+                <h2 className="title direccion__title font-bold">Redes sociales</h2>
                 <div className="social__box">
 
                     <a href="https://www.instagram.com/manuffit78/" className="icons instagram" title="instagram"><FaInstagram /></a>
