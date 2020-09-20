@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaInstagram, FaTwitterSquare, FaLinkedin  } from 'react-icons/fa'
 import styled from 'styled-components';
 
 const QueHagoContainer = styled.div`
@@ -26,6 +27,8 @@ const LeftColumn = styled.div`
     border-right: 1px solid #6A6B7B;
     .cab{
         margin-bottom: 2em;
+        border-bottom: 1px solid #191A28;
+        min-height: 9em;
     }
     .nombre{
         position: relative;
@@ -62,14 +65,45 @@ const LeftColumn = styled.div`
 `;
 
 const RightColumn = styled.div`
+    padding: 20px;
 
+    .contacto{
+        min-height: 9em;
+        border-bottom: 1px solid #191A28;
+        margin-bottom: 2em;
+    }
     .contacto__title{
         font-size: 2rem;
         text-transform: uppercase;
         font-weight: 800;
+        line-height: 1em;
+        
     }
-    ${'' /* background-color: #6A6B7B; */}
-    padding: 20px;
+    .title{
+        font-size: 1.5em;
+    }
+    .box{
+        margin-bottom: 1.5em;
+    }
+
+    .social__box{
+        display: grid;
+        grid-template-columns: repeat(3, 10%);
+        grid-gap: 1em;
+        .title{
+            margin-bottom: 1.5em;
+        }
+        .icons{
+            font-size: 1.7em;
+            transition: color .4s ease-in-out;
+            &:hover{
+                color: #98A6B6;
+            }
+        }
+    }
+
+
+    
 `;
 
 
@@ -89,7 +123,7 @@ const QueHago = () => {
                 <div className="expe__case">
                 <div className="expe__case-unit">
                     <div className="expe__case-date">
-                        Junio 2010 - Marzo 2017
+                        Junio 2009 - Marzo 2015
                         <div className="expe__case-place ">
                             Orihuela, España
                         </div>
@@ -165,7 +199,31 @@ const QueHago = () => {
 
         <RightColumn className="">
             <div className="contacto">
-                <h2 className="contacto__title"> Contácto</h2>
+                <h2 className="contacto__title"> Información de contácto</h2>
+            </div>
+            <div className="nacimiento box">
+                <h2 class="title nacimiento__title font-bold">Fecha de nacimiento</h2>
+                <p className="nacimiento__content"> 30-01-1978</p>
+            </div>
+            <div className="nacionalidad box">
+                <h2 class="title nacionalidad__title font-bold">Nacionalidad</h2>
+                <p className="nacionalidad__content"> Española</p>
+            </div>
+            <div className="email box">
+                <h2 class="title email__title font-bold">Email</h2>
+                <p className="email__content"> m.villagordovera[at]gmail.com</p>
+            </div>
+
+            <div className="social box">
+                <h2 class="title direccion__title font-bold">Redes sociales</h2>
+                <div className="social__box">
+
+                    <a href="https://www.instagram.com/manuffit78/" className="icons instagram" title="instagram"><FaInstagram /></a>
+                    <a href="https://twitter.com/mnuhell" className="icons twitter" title="twitter"><FaTwitterSquare /></a>
+                    <a href="https://www.linkedin.com/in/manuelvillagordo/" className="icons linkedin" title="LinkedIn"><FaLinkedin /></a>
+
+                </div>
+    
             </div>
         </RightColumn>    
             
