@@ -1,5 +1,7 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+
+import styled from 'styled-components';
+
 
 
 
@@ -8,8 +10,9 @@ const LoginScreen = () => {
     return (
 
         <div className="container">
-
-            <h1>Login Screen</h1>
+            <div className="loginScreen">
+                <h1>Login Screen</h1>
+            </div>
 
         </div>
 

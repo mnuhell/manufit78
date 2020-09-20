@@ -94,7 +94,7 @@ const RightColumn = styled.div`
             margin-bottom: 1.5em;
         }
         .icons{
-            font-size: 1.7em;
+            font-size: 1.5em;
             transition: color .4s ease-in-out;
             &:hover{
                 color: #98A6B6;
