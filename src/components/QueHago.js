@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaInstagram, FaTwitterSquare, FaLinkedin  } from 'react-icons/fa'
+import { FaInstagram, FaTwitterSquare, FaLinkedin, FaReact, FaPhp, FaHtml5, FaCss3, FaGithubAlt  } from 'react-icons/fa';
+import { DiJavascript1 } from "react-icons/di";
 import styled from 'styled-components';
 
 const QueHagoContainer = styled.div`
@@ -62,6 +63,16 @@ const LeftColumn = styled.div`
         font-size: .7em;
         margin-top: -3px;
     }
+
+    .skills{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(5, 1fr);
+        font-size: 1.8em;
+        margin-bottom: 1em;
+    }
+
 `;
 
 const RightColumn = styled.div`
@@ -183,7 +194,7 @@ const QueHago = () => {
                     </div>
                     <div className="expe__case-unit">
                         <div className="expe__case-date">
-                            Diciembre 2018 - actualidad
+                            Diciembre 2020 - actualidad
                             <div className="expe__case-place ">
                                 Catral, España
                             </div>
@@ -192,6 +203,23 @@ const QueHago = () => {
                             <p>Proyecto personal, Laravel y Vue. Reserva clases Crossfit </p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div className="expe">
+                <h2 className="expe__title"> Skills </h2>
+
+                <div className="expe__case-unit skills">
+                    <a href="#" title="React"><FaReact /></a>
+                    <a href="#" title="PHP"><FaPhp /></a>
+                    <a href="#" title="HTML"><FaHtml5 /></a> 
+                    <a href="#" title="CSS3"><FaCss3 /></a> 
+                    <a href="#" title="Javascript"><DiJavascript1 /></a>    
+                </div>
+
+                <h2 className="expe__title"> Control de Versiones </h2>
+                <div className="expe__case-unit skills">
+                    <a href="https://github.com/mnuhell" title="Github"><FaGithubAlt /></a>    
                 </div>
             </div>
             
