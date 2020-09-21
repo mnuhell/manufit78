@@ -1,7 +1,7 @@
 import {types} from '../types/types';
 
 
-const authReducers = ( state = { uid: 1234}, action) => {
+const authReducers = ( state = {}, action) => {
 
     switch ( action.type ) {
         case types.login:
