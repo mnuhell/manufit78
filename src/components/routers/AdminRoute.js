@@ -9,7 +9,7 @@ const AdminRoute = () => {
         <Switch>
             <Route exact to="/admin/home" component={AdminScreen} />
 
-            <Redirect to="/admin" />
+            <Redirect to="/auth/login" />
         </Switch>
     )
 }

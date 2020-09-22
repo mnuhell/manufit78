@@ -13,7 +13,7 @@ const Footer = () => {
     return (
         <ContainerFooter className="footer py-2 text-center font-global bg-fit-white-300 text-fit-dark-500 shadow">
             <footer>
-                <p><a href="" >Descarga mi CV</a></p>
+                <p>Deploy with <a href="https://vercel.com" title="Vercel">Vercel</a></p>
             </footer>
         </ContainerFooter>
     )

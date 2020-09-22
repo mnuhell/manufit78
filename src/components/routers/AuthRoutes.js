@@ -17,7 +17,7 @@ const AuthRoutes = () => {
                     component={ LoginScreen } />
 
                     <Route 
-                    exact
+                    
                     path="/auth/register" 
                     component={ RegisterScreen  } />
 

@@ -14,21 +14,23 @@ import LoginRoute from './LoginRoute';
 
     return (
         <Switch>
-          <PublicRoute 
-              path="/"
-              component={ PageRoutes }
-              isAuthenticated={isLoggedIn}
-            />
+          
 
             <PrivateRoute 
               path="/admin" component={AdminScreen} isAuthenticated={isLoggedIn}
               />
 
             <LoginRoute 
-             path="/auth"
+              path="/auth"
               component={ AuthRoutes }
               isAuthenticated={isLoggedIn}
             />
+
+            <PublicRoute 
+              path="/"
+              component={ PageRoutes }
+              isAuthenticated={isLoggedIn}
+            />    
         </Switch>
     )
   }

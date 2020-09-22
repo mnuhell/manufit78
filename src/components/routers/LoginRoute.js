@@ -12,7 +12,7 @@ const LoginRoute = ({
         <Route 
             component={(props) => (
                 (!isAuthenticated)
-                ? <Component { ...props } /> : <Redirect to="/auth/login" />
+                ? <Component { ...props } /> : <Redirect to="/" />
             )}
         />
     )
