@@ -67,7 +67,7 @@ const LoginScreen = () => {
                     <button className="bg-fit-white-100 text-fit-dark-500 hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                         Entrar
                     </button>
-                    <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/auth/register">
+                    <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/auth/register">
                         Registrate
                     </a>   
                 </div>

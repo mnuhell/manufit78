@@ -1,4 +1,4 @@
-import {types} from '../types/types';
+import { types } from '../types/types';
 
 
 const initialState = {
@@ -8,7 +8,7 @@ const initialState = {
 
 export const uiReducer = ( state = initialState, action ) => {
 
-    switch( action.types ) {
+    switch( action.type ) {
         case types.uiSetError: 
             return {
                 ...state,
@@ -20,7 +20,7 @@ export const uiReducer = ( state = initialState, action ) => {
             msgError: null
         }
 
-            default:
-                return state;
+        default:
+            return state;
     }
 }

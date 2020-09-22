@@ -1,8 +1,10 @@
 import React from 'react';
 import useForm from '../hooks/useForm';
 import validator from 'validator';
+import { removeError, setError } from '../actions/ui';
 
 import styled from 'styled-components';
+import { useDispatch, useSelector } from 'react-redux';
 
 const FormRegister = styled.div`
 
@@ -20,50 +22,68 @@ const FormRegister = styled.div`
 
 const RegisterScreen = () => {
 
-    const [ formValues, handleInputChange, reset ] = useForm();
+    const dispatch = useDispatch();
+
+    const { msgError } = useSelector(state => state.ui)
+
+    const [ formValues, handleInputChange ] = useForm({
+        username: 'manufit78',
+        email: 'tuemail@gmail.com',
+        password: '',
+        repeatPassword: ''
+    });
 
     const { email, username, password, repeatPassword } = formValues;
 
-
-    const handleInputregister = (e) => {
+    console.log(password.length)
+    const handleInputRegister = (e) => {
         e.preventDefault();
+
         
-        if(!formValid()) {
-            console.log('Formulario coprrecto')
+        if( isFormValid() ) {
+            console.log('Formulario correcto')
         }
     }
 
     
-    const formValid = () => {
+    const isFormValid = () => {
 
-        if(username.trim().lenght == 0) {
-            console.log("Username is required"); 
+        if(username.trim().length === 0) {
+            dispatch( setError('Username es requerido')); 
             return false;
-        } else if ( !validator.isEmail(email)) {
-            console.log("Email is not valid");
+        } else if ( !validator.isEmail( email )) {
+            dispatch( setError("El email no es válido"));
             return false;
-        } else if( password != repeatPassword) {
-            console.log("Password are no same");
-            return true
+        } else if( password.length < 6) {
+            dispatch( setError( "Son necesarios más de 6 caracteres"));
+            return false;
+        } else if(password != repeatPassword) {
+            dispatch( setError("Las contraseñas no coinciden"));
+            return false;
         }
+
+        dispatch( removeError());
 
         return true;
     }
 
     return (
         <FormRegister>
-        <form className="font-culum" onSubmit={ handleInputregister }>
+        <form className="font-culum" onSubmit={ handleInputRegister }>
                 <div className="form-login-title text-center mb-4 uppercase">
                     <p>Registro</p>
                 </div>
                 <div className="mb-4">
-                    <div className="error">Hola mundo</div>
+                    {
+                        msgError &&
+                        <div className="error shadow ">{ msgError }</div>
+                    }
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                         Email
                     </label>
                     <input 
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-fit-dark-500 leading-tight focus:outline-none focus:shadow-outline" 
-                    id="email" type="email" placeholder="Email" name="email"
+                    id="email" type="email" placeholder="Email" name="email" value={ email }
                     onChange={handleInputChange} />
                 </div>
 
@@ -74,7 +94,7 @@ const RegisterScreen = () => {
                     </label>
                     <input 
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-fit-dark-500 leading-tight focus:outline-none focus:shadow-outline" 
-                    id="username" type="username" placeholder="username" name="username"
+                    id="username" type="text" placeholder="username" name="username" value={username}
                     onChange={handleInputChange} />
                 </div>
 
@@ -95,7 +115,7 @@ const RegisterScreen = () => {
                     <input 
                     className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-fit-dark-500 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
                     id="repetPassword" type="password" placeholder="******************"
-                    name="repetPassword" onChange={handleInputChange} />
+                    name="repeatPassword" onChange={handleInputChange} />
                 </div>
 
                 <div className="flex items-center justify-between">
