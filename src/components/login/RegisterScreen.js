@@ -35,10 +35,8 @@ const RegisterScreen = () => {
 
     const { email, username, password, repeatPassword } = formValues;
 
-    console.log(password.length)
     const handleInputRegister = (e) => {
         e.preventDefault();
-
         
         if( isFormValid() ) {
             console.log('Formulario correcto')
