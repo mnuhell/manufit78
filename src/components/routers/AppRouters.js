@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Switch, Route } from "react-router-dom";
-import Home from '../../components/Home';
-import QuienSoy from '../../components/QuienSoy';
-import QueHago from '../../components/QueHago';
-import Noticias from '../../components/Noticias';
-import NoticiaScreen from '../../components/NoticiaScreen';
 import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 import AdminScreen from '../AdminScreen';
-import LoginScreen from '../LoginScreen';
+import PageRoutes from './PageRoutes';
+import AuthRoutes from './AuthRoutes';
+import LoginRoute from './LoginRoute';
 
 
   const AppRouters = () => {
@@ -16,17 +14,21 @@ import LoginScreen from '../LoginScreen';
 
     return (
         <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route path="/quien-soy" component={QuienSoy}></Route>
-            <Route path="/que-hago" component={QueHago}></Route>
-            <Route path="/noticias" component={Noticias}></Route>
-            <Route path="/noticias/:url" component={NoticiaScreen}></Route>
+          <PublicRoute 
+              path="/"
+              component={ PageRoutes }
+              isAuthenticated={isLoggedIn}
+            />
 
             <PrivateRoute 
-              exact path="/admin" component={AdminScreen} isAuthenticated={isLoggedIn}
+              path="/admin" component={AdminScreen} isAuthenticated={isLoggedIn}
               />
 
-            <Route path="/auth/login" component={LoginScreen} />
+            <LoginRoute 
+             path="/auth"
+              component={ AuthRoutes }
+              isAuthenticated={isLoggedIn}
+            />
         </Switch>
     )
   }

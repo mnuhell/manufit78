@@ -217,7 +217,7 @@ const QueHago = () => {
                     <a href="#" title="Javascript"><DiJavascript1 /></a>    
                 </div>
 
-                <h2 className="expe__title"> Control de Versiones </h2>
+                <h2 className="expe__title"> Cuenta Github </h2>
                 <div className="expe__case-unit skills">
                     <a href="https://github.com/mnuhell" title="Github"><FaGithubAlt /></a>    
                 </div>

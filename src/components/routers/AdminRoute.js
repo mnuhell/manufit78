@@ -1,12 +1,16 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import AdminScreen from '../AdminScreen';
 
 
 const AdminRoute = () => {
 
     return (
-        <Route exact to="/admin" component={AdminScreen} />
+        <Switch>
+            <Route exact to="/admin/home" component={AdminScreen} />
+
+            <Redirect to="/admin" />
+        </Switch>
     )
 }
 
