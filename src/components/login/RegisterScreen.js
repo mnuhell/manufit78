@@ -1,5 +1,6 @@
 import React from 'react';
 import useForm from '../hooks/useForm';
+import validator from 'validator';
 
 import styled from 'styled-components';
 
@@ -24,11 +25,29 @@ const RegisterScreen = () => {
     const { email, username, password, repeatPassword } = formValues;
 
 
-    const handleInputregister = () => {
+    const handleInputregister = (e) => {
+        e.preventDefault();
+        
+        if(!formValid()) {
+            console.log('Formulario coprrecto')
+        }
+    }
 
-        return (
-            console.log( formValues )
-        )
+    
+    const formValid = () => {
+
+        if(username.trim().lenght == 0) {
+            console.log("Username is required"); 
+            return false;
+        } else if ( !validator.isEmail(email)) {
+            console.log("Email is not valid");
+            return false;
+        } else if( password != repeatPassword) {
+            console.log("Password are no same");
+            return true
+        }
+
+        return true;
     }
 
     return (
@@ -38,12 +57,13 @@ const RegisterScreen = () => {
                     <p>Registro</p>
                 </div>
                 <div className="mb-4">
+                    <div className="error">Hola mundo</div>
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                         Email
                     </label>
                     <input 
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-fit-dark-500 leading-tight focus:outline-none focus:shadow-outline" 
-                    id="email" type="email" placeholder="Email" name="email" value={email}
+                    id="email" type="email" placeholder="Email" name="email"
                     onChange={handleInputChange} />
                 </div>
 
@@ -54,7 +74,7 @@ const RegisterScreen = () => {
                     </label>
                     <input 
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-fit-dark-500 leading-tight focus:outline-none focus:shadow-outline" 
-                    id="username" type="username" placeholder="username" name="username" value={email}
+                    id="username" type="username" placeholder="username" name="username"
                     onChange={handleInputChange} />
                 </div>
 
@@ -65,7 +85,7 @@ const RegisterScreen = () => {
                     <input 
                     className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-fit-dark-500 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
                     id="password" type="password" placeholder="******************"
-                    name="password" onChange={handleInputChange} value={ password } />
+                    name="password" onChange={handleInputChange} />
                 </div>
 
                 <div className="mb-6">
@@ -82,7 +102,7 @@ const RegisterScreen = () => {
                     <button className="bg-fit-white-100 text-fit-dark-500 hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                         Registrar
                     </button>
-                    <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/auth/login">
+                    <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/auth/login">
                         Login
                     </a>   
                 </div>
