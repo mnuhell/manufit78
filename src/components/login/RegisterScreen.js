@@ -2,9 +2,11 @@ import React from 'react';
 import useForm from '../hooks/useForm';
 import validator from 'validator';
 import { removeError, setError } from '../actions/ui';
+import firebase from '../firebase/firebaseConfig.js';
 
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
+import { createWithPasswordAndEmail } from '../actions/auth';
 
 const FormRegister = styled.div`
 
@@ -39,7 +41,8 @@ const RegisterScreen = () => {
         e.preventDefault();
         
         if( isFormValid() ) {
-            console.log('Formulario correcto')
+            
+            dispatch( createWithPasswordAndEmail( email, password, username ));
         }
     }
 

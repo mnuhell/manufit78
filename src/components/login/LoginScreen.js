@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
 import styled from 'styled-components';
 import useForm from '../hooks/useForm';
-import { login } from '../actions/auth';
+import { LoginWithEmailPassword } from '../actions/auth';
 
 const FormLogin = styled.div`
 
@@ -22,7 +21,7 @@ const LoginScreen = () => {
 
     const dispatch = useDispatch();
 
-    const [ formValues, handleInputChange, reset ] = useForm({
+    const [ formValues, handleInputChange ] = useForm({
         email: 'm.villagordovera@gmail.com',
         password: 1234
     });
@@ -32,7 +31,7 @@ const LoginScreen = () => {
     const handleSubmitLogin = e => {
         e.preventDefault();
 
-        dispatch( login ( 12345, 'manuel') );
+        dispatch( LoginWithEmailPassword(email, password) )
 
     }
 
