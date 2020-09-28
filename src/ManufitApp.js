@@ -1,11 +1,13 @@
-import React from 'react'; 
+import React, { useEffect } from 'react'; 
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
+import {firebase} from '../src/components/firebase/firebaseConfig';
 import '../src/scss/styles.scss';
 import styled from 'styled-components';
-import { Provider } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
 import { store } from './components/store/store';
 import AppRouters from './components/routers/AppRouters';
+import { login } from './components/actions/auth';
 
 const Main = styled.main`
 

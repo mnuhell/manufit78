@@ -18,9 +18,9 @@ const Menu = () => {
     return (
         <MenuContainer className="font-culum text-dark-fit-500 text-right menu uppercase">
             <ul className="ul-menu flex justify-end gap-5 sm:flex-no-wrap">
-                <li className="li-menu">
+                {/* <li className="li-menu">
                     <Link to="/"> Home </Link>
-                </li>
+                </li> */}
                 <li className="li-menu">
                     <Link to="/quien-soy"> Quien soy </Link>
                 </li>

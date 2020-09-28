@@ -19,6 +19,21 @@ export const LoginWithEmailPassword = ( email, password ) => {
     }
 }
 
+export const createWithPasswordAndEmail = ( email, password, username ) => {
+
+    return ( dispatch ) => {
+        
+        firebase.auth().createUserWithEmailAndPassword( email, password)
+        .then( async({ user }) => {
+
+            await user.updateProfile({
+                displayName: username,
+            })
+            console.log(user);
+        });
+    }
+}
+
 export const login = (uid, displayName) => ({
     type: types.login,
     payload: {
@@ -26,21 +41,3 @@ export const login = (uid, displayName) => ({
         displayName
     }
 });
-
-export const createWithPasswordAndEmail = ( email, password, username ) => {
-
-    return ( dispatch ) => {
-
-
-
-        firebase.auth().createUserWithEmailAndPassword( email, password)
-        .then( async({ user }) => {
-
-            await user.updateProfile({
-                displayName: username,
-            })
-
-            console.log(user);
-        });
-    }
-}

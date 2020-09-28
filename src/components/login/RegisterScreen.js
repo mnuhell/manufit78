@@ -2,7 +2,6 @@ import React from 'react';
 import useForm from '../hooks/useForm';
 import validator from 'validator';
 import { removeError, setError } from '../actions/ui';
-import firebase from '../firebase/firebaseConfig.js';
 
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
