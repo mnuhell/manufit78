@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import AdminScreen from '../AdminScreen';
@@ -13,6 +13,7 @@ import { login } from '../actions/auth';
 
   const AppRouters = () => {
 
+    const [ checking, setCheking ] = useState( true );
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const dispatch = useDispatch();
@@ -21,30 +22,43 @@ import { login } from '../actions/auth';
         firebase.auth().onAuthStateChanged( ( user ) => {            
             if( user?.uid ) {
                 dispatch( login(user.uid, user.displayName) )
-                
+                setIsLoggedIn(true)
+            } else {
+              setIsLoggedIn(false)
             }
+
+            setCheking( false )
+            
+            
         })
         
-    }, [])
+    }, [ dispatch, setIsLoggedIn, setCheking]);
+
+    console.log(checking);
+    if( checking ) {
+      return (
+        <h1>Espere</h1>
+      )
+    }
 
     return (
         <Switch>
           
 
             <PrivateRoute 
-              path="/admin" component={AdminScreen} isAuthenticated={isLoggedIn}
+              path="/admin" component={AdminScreen}
               />
 
             <LoginRoute 
               path="/auth"
               component={ AuthRoutes }
-              isAuthenticated={isLoggedIn}
+            
             />
 
             <PublicRoute 
               path="/"
               component={ PageRoutes }
-              isAuthenticated={isLoggedIn}
+              
             />    
         </Switch>
     )

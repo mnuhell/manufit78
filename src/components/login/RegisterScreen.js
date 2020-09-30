@@ -57,7 +57,7 @@ const RegisterScreen = () => {
         } else if( password.length < 6) {
             dispatch( setError( "Son necesarios más de 6 caracteres"));
             return false;
-        } else if(password != repeatPassword) {
+        } else if(password !== repeatPassword) {
             dispatch( setError("Las contraseñas no coinciden"));
             return false;
         }

@@ -22,8 +22,8 @@ const LoginScreen = () => {
     const dispatch = useDispatch();
 
     const [ formValues, handleInputChange ] = useForm({
-        email: 'm.villagordovera@gmail.com',
-        password: 1234
+        email: '',
+        password: ''
     });
 
     const { email, password } = formValues;
@@ -48,7 +48,7 @@ const LoginScreen = () => {
                     </label>
                     <input 
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-fit-dark-500 leading-tight focus:outline-none focus:shadow-outline" 
-                    id="email" type="email" placeholder="Email" name="email" value={email}
+                    id="email" type="email" placeholder="Email" name="email" autoComplete="on"
                     onChange={handleInputChange} />
                 </div>
 
@@ -58,8 +58,8 @@ const LoginScreen = () => {
                     </label>
                     <input 
                     className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-fit-dark-500 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
-                    id="password" type="password" placeholder="******************"
-                    name="password" onChange={handleInputChange} value={ password } />
+                    id="password" type="password" placeholder="******************" autoComplete="on"
+                    name="password" onChange={handleInputChange} />
                 </div>
 
                 <div className="flex items-center justify-between">

@@ -210,11 +210,11 @@ const QueHago = () => {
                 <h2 className="expe__title"> Skills </h2>
 
                 <div className="expe__case-unit skills">
-                    <a href="#" title="React"><FaReact /></a>
-                    <a href="#" title="PHP"><FaPhp /></a>
-                    <a href="#" title="HTML"><FaHtml5 /></a> 
-                    <a href="#" title="CSS3"><FaCss3 /></a> 
-                    <a href="#" title="Javascript"><DiJavascript1 /></a>    
+                    <a href="#p" title="React"><FaReact /></a>
+                    <a href="#p" title="PHP"><FaPhp /></a>
+                    <a href="#p" title="HTML"><FaHtml5 /></a> 
+                    <a href="#p" title="CSS3"><FaCss3 /></a> 
+                    <a href="#p" title="Javascript"><DiJavascript1 /></a>    
                 </div>
 
                 <h2 className="expe__title"> Cuenta Github </h2>
