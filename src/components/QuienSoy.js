@@ -9,8 +9,35 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     align-content: center;
-    max-width: 43rem;
+    @media(min-width: 320px){
+        max-width: 43rem;
+    } 
+
+    @media(min-width: 768px){
+        max-width: 50em;
+    } 
+    
     padding: 5em .2em;
+
+    @media(min-width: 320px) {
+        margin: 400px auto;
+    }
+
+    @media(min-width: 375px) {
+        margin: 200px auto;
+    }
+
+    @media(min-width: 414px) {
+        margin: 100px auto;
+    }
+
+    @media(min-width: 568px) {
+        margin: 0px auto;
+    }
+
+    @media(min-width: 736px) {
+        margin: 0px auto;
+    }
 
     .notas__intro{
         padding: 0 20px;

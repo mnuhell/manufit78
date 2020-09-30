@@ -46,12 +46,12 @@ import { login } from '../actions/auth';
           
 
             <PrivateRoute 
-              path="/admin" component={AdminScreen}
+              path="/admin" component={AdminScreen} isAuthenticated={isLoggedIn}
               />
 
             <LoginRoute 
               path="/auth"
-              component={ AuthRoutes }
+              component={ AuthRoutes } isAuthenticated={isLoggedIn}
             
             />
 
