@@ -7,11 +7,24 @@ import { startLogout } from './actions/auth';
 
 const MenuContainer = styled.nav`
     
+    .ul-menu{
+        display:grid;
+        @media (min-width: 320px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        justify-content: center;
+        align-items: center;
+        justify-items: flex-start;
+    }
     .li-menu{
         display: inherit;
         vertical-align: middle;
         a{
-            font-size: .75rem;
+            font-size: .7rem;
             svg{
                 font-size: 1.4em;
             }
@@ -21,7 +34,6 @@ const MenuContainer = styled.nav`
     .login{
         position: relative;
         text-align: center;
-        font-size: .8em;
         font-style: italic;
     }
 `;
@@ -40,8 +52,8 @@ const Menu = () => {
     }
 
     return (
-        <MenuContainer className="font-culum text-dark-fit-500 text-right menu uppercase">
-            <ul className="ul-menu flex justify-end gap-5 sm:flex-no-wrap">
+        <MenuContainer className="font-culum text-dark-fit-500 menu uppercase">
+            <ul className="ul-menu">
                 {/* <li className="li-menu">
                     <Link to="/"> Home </Link>
                 </li> */}
