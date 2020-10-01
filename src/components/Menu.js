@@ -22,7 +22,7 @@ const MenuContainer = styled.nav`
         position: relative;
         text-align: center;
         font-size: .8em;
-
+        font-style: italic;
     }
 `;
 
@@ -54,7 +54,7 @@ const Menu = () => {
                 {
                     (uid) ? 
                     <li className="li-menu login">
-                        <Link to="/auth/logout" onClick={ handleLogout } title={ name } > <FaRegUserCircle /> </Link>
+                        <Link to="/auth/logout" onClick={ handleLogout } title={ name } > { name } </Link>
                     </li> : 
                     <li className="li-menu">
                         <Link to="/auth/login" title="Haz loguin" onClick={ handleLogout }
