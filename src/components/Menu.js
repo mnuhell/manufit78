@@ -10,15 +10,12 @@ const MenuContainer = styled.nav`
     .ul-menu{
         display:grid;
         @media (min-width: 320px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        @media (min-width: 768px) {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 80px);
         }
     
         justify-content: center;
         align-items: center;
-        justify-items: flex-start;
+        justify-items: flex-end;
     }
     .li-menu{
         display: inherit;
