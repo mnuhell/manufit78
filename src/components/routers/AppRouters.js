@@ -34,7 +34,6 @@ import { login } from '../actions/auth';
         
     }, [ dispatch, setIsLoggedIn, setCheking]);
 
-    console.log(checking);
     if( checking ) {
       return (
         <h1>Espere</h1>

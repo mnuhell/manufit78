@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -91,12 +91,13 @@ const Menu = () => {
     const dispatch = useDispatch();
 
     const handleLogout = () => {
-    
         dispatch( startLogout() );
     }
+        
 
     return (
         <MenuContainer className="font-culum text-dark-fit-500 menu uppercase">
+
             <ul className="ul-menu">
                 {/* <li className="li-menu">
                     <Link to="/"> Home </Link>

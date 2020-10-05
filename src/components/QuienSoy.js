@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 
 `;
 
-const Imagen = styled.image`
+const ImagenFace = styled.div`
 
     
         img{
@@ -51,7 +51,7 @@ const QuienSoy = () => {
                     Tu navegador no soporta la etiqueta HTML5 video.
                 </video>
             </Video> */}
-                <Imagen className="text-center"> <img src={`./assets/${Face}.jpg`} className="text-center shadow border-solid border-4 mb-4 border-fit-white-300" alt="Mi" /></Imagen>
+                <ImagenFace className="text-center"> <img src={`./assets/${Face}.jpg`} className="text-center shadow border-solid border-4 mb-4 border-fit-white-300" alt="Mi" /></ImagenFace>
                 <p>Mi nombre es Manuel, vivo en Orihuela, Alicante desde hace unos 14 años junto a <span className="italic">Veronica</span>, mi mujer desde hace 13 y con <span className="italic">Hannibal</span> que esta con nosotros desde el 2012 ;).</p>
                 <p>Aficciones tengo muchas, a parte de disfrutar de la familia y amigos también práctico durante 6 días a la semana algún deporte, por ejemplo:</p>
 
