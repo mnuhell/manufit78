@@ -6,19 +6,13 @@ import {useDispatch, useSelector} from 'react-redux';
 import { startLogout } from './actions/auth';
 
 const MenuContainer = styled.nav`
-    
+
     .ul-menu{
         display:grid;
-        @media (min-width: 320px) {
-            grid-template-columns: repeat(3, 80px);
-        }
-        @media (min-width: 320px) {
-            grid-template-columns: repeat(3, 160px);
-        }
-    
+    	grid-template-columns: repeat(4, 1fr);
         justify-content: center;
         align-items: center;
-        justify-items: flex-end;
+
     }
     .li-menu{
         display: inherit;
@@ -62,7 +56,7 @@ const MenuContainer = styled.nav`
             border-bottom: 1px solid #2A2C42;
         }
     }
-    
+
     .login{
         position: relative;
         display: inline-block;
@@ -78,59 +72,26 @@ const MenuContainer = styled.nav`
             top: 10px;
             z-index: -1;
         }
-            
+
     }
 `;
 
 
 const Menu = () => {
 
-    const user = useSelector( state => state.auth); 
-    const { uid, name} = user;
-
-    const dispatch = useDispatch();
-
-    const handleLogout = () => {
-    
-        dispatch( startLogout() );
-    }
 
     return (
         <MenuContainer className="font-culum text-dark-fit-500 menu uppercase">
-            <ul className="ul-menu">
-                {/* <li className="li-menu">
-                    <Link to="/"> Home </Link>
-                </li> */}
+            {/* <ul className="ul-menu">
+
                 <li className="li-menu">
                     <Link to="/quien-soy"> Quien soy </Link>
                 </li>
                 <li className="li-menu">
                     <Link to="/que-hago"> Que hago </Link>
                 </li>
-                {
-                    (uid) ? 
-                    <li className="li-menu login">
-                        <div className="login__menu">
-                            <Link to="" title={ name } > { name } </Link>
-                            <span className="login__icon"><FaRegUserCircle /></span>
-                        </div>
-                        <div className="login__container">
-                            <Link to="/auth/logout" onClick={ handleLogout } title="logout" > Logout </Link>
-                            <Link to="/admin/posts" title="ver artículos" > Artículos </Link>
-                            <Link to="/admin/account" title="mi cuenta" > Mí cuenta </Link>
-                        </div>
-                    </li> : 
-                    <li className="li-menu login__menu">
-                        <Link to="/auth/login" title="Haz loguin" onClick={ handleLogout }
-                        > Entrar </Link>
-                        <span className="login__icon"><FaRegUserCircle /></span>
-                    </li>
-                }
-                
-                {/* <li className="li-menu">
-                    <Link to="/noticias"> Noticias </Link>
-                </li> */}
-            </ul>
+
+            </ul> */}
         </MenuContainer>
     )
 }
